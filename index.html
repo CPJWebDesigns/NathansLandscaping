@@ -9,6 +9,20 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <style>
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0 !important;
+}
+
+
     html {
         scroll-behavior: smooth;
     }
@@ -32,10 +46,12 @@
     }
     .logo {
         position: absolute;
-        top: 0px;
-        left: 5px;
-        width: 150px;
+        top: 20px;
+        left: 50px;
+        width: 120px;
         height: auto;
+        border-radius: 50%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .header-text {
         max-width: 100%;
@@ -50,10 +66,10 @@
     }
     .facebook-button {
         position: absolute;
-        top: 50px;
-        right: 60px;
-        width: 50px;
-        height: 50px;
+        top: 20px;
+        right: 50px;
+        width: 120px;
+        height: 120px;
         background-image: url('Images/FB.png');
         background-size: cover;
         background-position: center;
@@ -68,7 +84,7 @@
 
     main {
         padding: 50px 20px;
-        background-color: #ffffff;
+        background-color: #dbdbdb;
         flex-grow: 1;
     }
     .intro-text {
@@ -82,7 +98,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        margin-top: 40px;
+        margin-top: 0px;
         padding: 0 20px;
     }
     .service, .project-item {
@@ -127,6 +143,12 @@
     .footer a:hover {
         text-decoration: underline;
     }
+    .footer b {
+        color: rgba(148, 148, 148, 0.329);
+    }
+    .footer b:hover {
+        text-decoration: underline;
+    }
     .contact-button {
         display: flex;
         justify-content: center;
@@ -157,7 +179,6 @@
         position: relative;
         font-size: clamp(1rem, 1vw, 1rem);
     }
-
     .sub-section-title {
         font-size: 28px;
         color: #2b4d2e;
@@ -171,6 +192,16 @@
         justify-content: center;
         gap: 40px;
     }
+    .sub-section-content-centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        gap: -30px;
+    }
+
     .left, .right {
         width: 100%;
     }
@@ -186,6 +217,15 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
+    .grid-title {
+        background-color: #ffffff;
+        padding: 10px -50px;
+        border-radius: 8px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.158);
+        text-align: center;
+        margin-bottom: -20px;
+    }
+
     .grid-item img {
         width: 100%;
         height: auto;
@@ -258,11 +298,37 @@
         }
     }
 
+
+<style>
+.gallery-container {
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 100%;
+}
+.gallery-buttons {
+    margin-top: 10px;
+}
+.gallery-buttons button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #2b4d2e;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.gallery-buttons button:hover {
+    background-color: #3a6540;
+}
+</style>
+
 </style>
 </head>
 <body>
 <header>
-    <img src="Images/Logo.png" class="logo" alt="Nathan's Landscaping Logo">
+    <img src="Images/Icon.jpg" class="logo" alt="Nathan's Landscaping Logo">
     <div class="header-text">
     <h1>Nathan's Landscaping</h1>
     <p>Quality Gardens, Professional Services</p>
@@ -272,7 +338,7 @@
 
 <main>
     <div class="intro-text" data-aos="fade-in">
-    Hi, I’m Nathan, I live in the heart of Worcestershire Worcester itself! I’ve been working in landscaping for of many years,
+    Hi, I’m Nathan, I live in the heart of Worcestershire Worcester itself! I’ve been working in landscaping for many years,
     <br>and I really enjoy helping people turn their outdoor spaces into something both beautiful and practical. 
     <br>Whether it's a cosy back-garden or a full garden makeover, I love bringing ideas to life. From design to 
     <br>execution, I offer a range of services to transform your garden into something special.
@@ -315,72 +381,269 @@
 
     <section class="past-projects">
         <div class="sub-section" data-aos="fade-up">
-            <h2 class="sub-section-title">Patios</h2>
             <div class="sub-section-content">
                 <div class="grid">
-                    <div class="grid-item">
-                        <img src="Images/Patio1.jpg" alt="Patio 1" class="project-image">
-                        <p>A clean and modern stone patio, perfect for outdoor gatherings and relaxing evenings. The design offers a smooth finish that complements a range of garden styles. Ideal for both small and large spaces, it enhances the outdoor experience. The layout allows for easy furniture placement and low-maintenance upkeep.</p>
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Patios</h2>
                     </div>
-                    <div class="grid-item">
-                        <img src="Images/Patio2.jpg" alt="Patio 2" class="project-image">
-                        <p>A spacious and practical patio installation featuring a timeless paving pattern. Built with durable materials, it adds elegance and functionality to any garden. The neutral tones allow for seamless integration with surrounding greenery. A great option for entertaining or simply enjoying the outdoors.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-section" data-aos="fade-up">
-            <h2 class="sub-section-title">Fencing</h2>
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-item">
-                        <img src="Images/Fencing1.jpg" alt="Fence 1" class="project-image">
-                        <p>A professionally crafted fence line with a stylish curved top design that adds a unique touch to the garden perimeter. Built with precision and quality timber, this fence not only provides privacy but also enhances curb appeal. It blends seamlessly with the natural environment. A perfect choice for homeowners wanting both function and form.</p>
-                    </div>
-                    <div class="grid-item">
-                        <img src="Images/Fencing2.jpg" alt="Fence 2" class="project-image">
-                        <p>A robust and neatly aligned fence line designed for both security and visual appeal. It offers a clean, modern look while marking property boundaries clearly. The straight lines and consistent height provide structure to the garden. Built to withstand the elements while maintaining its charm over time.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-section" data-aos="fade-up">
-            <h2 class="sub-section-title">Features</h2>
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-item">
-                        <img src="Images/Features1.jpg" alt="Feature 1" class="project-image">
-                        <p>A custom-built outdoor wooden gazebo complete with a dedicated BBQ area, perfect for entertaining. The structure provides shade and shelter, creating a cozy space for dining and relaxation. It blends natural materials with functional design. A standout garden feature that adds both value and lifestyle appeal.</p>
-                    </div>
-                    <div class="grid-item">
-                        <img src="Images/Features2.jpg" alt="Feature 2" class="project-image">
-                        <p>A beautifully rounded patio space that incorporates a built-in water feature at its center. This tranquil addition enhances the ambiance with the soothing sound of flowing water. It’s an inviting focal point for the garden, blending aesthetics with calmness. Ideal for peaceful afternoons or elegant garden gatherings.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-section" data-aos="fade-up">
-            <h2 class="sub-section-title">More</h2>
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-item">
-                        <img src="Images/More1.jpg" alt="More 1" class="project-image">
-                        <p>An elevated outdoor decking area crafted with millboard decking and a sleek finish. Perfect for hosting or relaxing, this space adds warmth and texture to the garden. It’s designed to flow naturally from the house into the yard. A low-maintenance solution with timeless appeal.</p>
-                    </div>
-                    <div class="grid-item">
-                        <img src="Images/More2.jpg" alt="More 2" class="project-image">
-                        <p>A creative children’s play area featuring an outdoor sandpit surrounded by built-in log stepping stones. Designed to encourage imaginative play and exploration. The natural materials make it a charming and safe addition to family gardens. A fun, eco-conscious feature that blends beautifully with the landscape.</p>
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Block Paving</h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="past-projects">
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="patioImage" src="Images/Patios/1.jpg" alt="Patio 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImagePatio()">Previous</button>
+                                    <button onclick="nextImagePatio()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Patios are a perfect way to extend your living space outdoors — whether you're after a sleek, modern look or a more traditional finish, we tailor each patio to suit your garden and lifestyle. Built to last and designed with care, our patios provide the ideal spot for relaxing, entertaining, or simply enjoying your outdoor space year-round.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="BlockpavingImage" src="Images/BlockPaving/1.JPG" alt="BlockPaving 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageBlockpaving()">Previous</button>
+                                    <button onclick="nextImageBlockpaving()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Block paving is a durable and stylish option for driveways, pathways, and patios — offering both practicality and curb appeal. With a range of patterns, colours, and finishes available, we can create a custom look that complements your home perfectly. Each installation is built with precision to ensure long-lasting quality and a flawless finish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-projects">
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Fencing</h2>
+                    </div>
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Decking</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="FencingImage" src="Images/Fencing/1.jpg" alt="Fencing 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageFencing()">Previous</button>
+                                    <button onclick="nextImageFencing()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Fencing adds both privacy and structure to your garden, while also enhancing its overall look. Whether you need a full boundary replacement or just a tidy repair, we offer high-quality, long-lasting fence solutions tailored to your space and needs.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="DeckingImage" src="Images/Decking/1.JPG" alt="Decking 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageDecking()">Previous</button>
+                                    <button onclick="nextImageDecking()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Decking is a great way to create a level, usable area in your garden — perfect for seating, socialising, or simply enjoying the outdoors. We design and install custom decks that blend beautifully with your garden and stand the test of time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-projects">
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Walling</h2>
+                    </div>
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Sleeperwork</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="WallingImage" src="Images/Walling/1.JPG" alt="Walling 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageWalling()">Previous</button>
+                                    <button onclick="nextImageWalling()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Garden walls add strength, structure, and style to any outdoor space. From decorative features to retaining walls, we build with both function and finish in mind, using quality materials to ensure a clean, lasting result.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="SleeperworkImage" src="Images/Sleeperwork/1.JPG" alt="Sleeperwork 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageSleeperwork()">Previous</button>
+                                    <button onclick="nextImageSleeperwork()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Sleepers are a versatile and eye-catching addition to any garden. Whether used for raised beds, borders, steps, or retaining walls, sleeperwork offers a natural, rustic charm while staying strong and practical.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-projects">
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Log Cabins</h2>
+                    </div>
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Gazebos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="LogCabinsImage" src="Images/LogCabins/1.JPG" alt="LogCabins 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageLogCabins()">Previous</button>
+                                    <button onclick="nextImageLogCabins()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Log cabins make a unique and functional feature in any garden — ideal for offices, studios, or relaxing spaces. We handle the full build with care and craftsmanship to ensure a sturdy, stylish finish that suits your space.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="GazebosImage" src="Images/Gazebos/1.JPG" alt="Gazebos 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageGazebos()">Previous</button>
+                                    <button onclick="nextImageGazebos()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>A gazebo adds instant character and shelter to your garden, creating the perfect spot for shade, relaxation, or outdoor dining. Built with precision and style, our gazebos are tailored to enhance your outdoor living.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-projects">
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Outdoor kitchens</h2>
+                    </div>
+                    <div class="grid-title">
+                        <h2 data-aos="fade-up">Firepits</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content">
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="OutdoorKitchensImage" src="Images/OutdoorKitchens/1.JPG" alt="OutdoorKitchens 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageOutdoorKitchens()">Previous</button>
+                                    <button onclick="nextImageOutdoorKitchens()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Take your garden gatherings to the next level with a custom outdoor kitchen. From worktops to built-in BBQs, we design functional, weather-resistant setups that make entertaining effortless and enjoyable.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item">
+                            <div class="gallery-container">
+                                <img id="FirepitsImage" src="Images/Firepits/1.JPG" alt="Firepits 1" class="project-image">
+                                <div class="gallery-buttons">
+                                    <button onclick="prevImageFirepits()">Previous</button>
+                                    <button onclick="nextImageFirepits()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>A firepit brings warmth, ambiance, and a focal point to your garden. Whether it’s for cosy nights or summer socials, we can install a safe, stylish fire feature that transforms how you use your outdoor space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="past-projects">
+        <h2 data-aos="fade-up">And even more</h2>
+    </section>
+
+    <section>
+        <div class="sub-section" data-aos="fade-up">
+            <div class="sub-section-content-centered">
+                <div class="grid-item">
+                    <div class="grid-item">
+                        <div class="gallery-container">
+                            <img id="MoreImage" src="Images/More/1.JPG" alt="More 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageMore()">Previous</button>
+                                <button onclick="nextImageMore()">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Proudly on the road and ready to work — our fully equipped van is a familiar sight across Worcestershire, carrying the tools, materials, and dedication we bring to every project. Keep an eye out — we might be working near you next!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="customer-quotes">
-    <h2 data-aos="fade-up">Customer Quotes</h2>
+        <h2 data-aos="fade-up">Customer Quotes</h2>
     </section>
 
     <section class="customer-quotes">
@@ -395,7 +658,7 @@
     <div class="project-item" data-aos="fade-up">
         <h3>“Nathan is a very conscientious and hardworking young man. We would certainly recommend him for all aspects of landscaping.”</h3>
         <p>— Trish A</p>
-      </div>
+    </div>
     </section>
 
     <div class="contact-button" data-aos="fade-up">
@@ -404,17 +667,312 @@
 </main>
 
 <footer class="footer">
-    <p>&copy; 2025 Nathan's Landscaping. All rights reserved.</p>
-    <p>
-      📍 Worcester, United Kingdom<br />
-      📞 <a href="tel:+447476351866">+44 7476 351866</a> | 
-      📧 <a href="mailto:NathsLandscapes@gmail.com">NathsLandscapes@gmail.com</a>
-    </p>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 600px; margin: 0 auto; text-align: center;">
+      <p>&copy; 2025 Nathan's Landscaping. All rights reserved.</p>
+      <p>
+        📍 Worcester, United Kingdom<br />
+        📞 <a href="tel:+447476351866">+44 7476 351866</a> | 
+        📧 <a href="mailto:NathsLandscapes@gmail.com">NathsLandscapes@gmail.com</a>
+      </p>
+  
+      <hr style="width: 80%; border: none; height: 1px; background-color: #fff;">
+  
+      <img src="Images/CPJ/Logo.png" alt="CPJ Web Designs Logo" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+      
+      <div>
+        <p style="margin: 10px 0 5px 0;"><strong>Site built by CPJWebDesigns</strong></p>
+        <p style="margin: 0;">
+          Hi, I’m the creator of this site — I'm a passionate web designer focused on clean, user-friendly designs, for any media enquiries please follow below. <br />
+          📞 <a href="tel:+447572147102">+44 7572 147102</a><br />
+          📧 <a href="mailto:CPJWebDesigns@gmail.com">CPJWebDesigns@gmail.com</a>
+        </p>
+      </div>
+    </div>
   </footer>
+  
+  
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+
+
+<script>
+    const totalImagesPatio = 38;
+    let currentImagePatio = 1;
+    const PatioElement = document.getElementById('patioImage');
+
+    function updateImagePatio() {
+        PatioElement.classList.add('fade-out');
+setTimeout(() => {
+    PatioElement.src = `Images/Patios/${currentImagePatio}.jpg`;
+    PatioElement.alt = `Patio ${currentImagePatio}`;
+    PatioElement.onload = () => {
+        PatioElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImagePatio() {
+        currentImagePatio = (currentImagePatio % totalImagesPatio) + 1;
+        updateImagePatio();
+    }
+
+    function prevImagePatio() {
+        currentImagePatio = (currentImagePatio - 1 <= 0) ? totalImagesPatio : currentImagePatio - 1;
+        updateImagePatio();
+    }
+
+    const totalImagesBlockpaving = 18;
+    let currentImageBlockpaving = 1;
+    const BlockpavingElement = document.getElementById('BlockpavingImage');
+
+    function updateImageBlockpaving() {
+        BlockpavingElement.classList.add('fade-out');
+setTimeout(() => {
+    BlockpavingElement.src = `Images/BlockPaving/${currentImageBlockpaving}.jpg`;
+    BlockpavingElement.alt = `BlockPaving ${currentImageBlockpaving}`;
+    BlockpavingElement.onload = () => {
+        BlockpavingElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageBlockpaving() {
+        currentImageBlockpaving = (currentImageBlockpaving % totalImagesBlockpaving) + 1;
+        updateImageBlockpaving();
+    }
+
+    function prevImageBlockpaving() {
+        currentImageBlockpaving = (currentImageBlockpaving - 1 <= 0) ? totalImagesBlockpaving : currentImageBlockpaving - 1;
+        updateImageBlockpaving();
+    }
+
+    const totalImagesFencing = 24;
+    let currentImageFencing = 1;
+    const FencingElement = document.getElementById('FencingImage');
+
+    function updateImageFencing() {
+        FencingElement.classList.add('fade-out');
+setTimeout(() => {
+    FencingElement.src = `Images/Fencing/${currentImageFencing}.jpg`;
+    FencingElement.alt = `Fencing ${currentImageFencing}`;
+    FencingElement.onload = () => {
+        FencingElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageFencing() {
+        currentImageFencing = (currentImageFencing % totalImagesFencing) + 1;
+        updateImageFencing();
+    }
+
+    function prevImageFencing() {
+        currentImageFencing = (currentImageFencing - 1 <= 0) ? totalImagesFencing : currentImageFencing - 1;
+        updateImageFencing();
+    }
+
+    const totalImagesDecking = 2;
+    let currentImageDecking = 1;
+    const DeckingElement = document.getElementById('DeckingImage');
+
+    function updateImageDecking() {
+        DeckingElement.classList.add('fade-out');
+setTimeout(() => {
+    DeckingElement.src = `Images/Decking/${currentImageDecking}.jpg`;
+    DeckingElement.alt = `Decking ${currentImageDecking}`;
+    DeckingElement.onload = () => {
+        DeckingElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageDecking() {
+        currentImageDecking = (currentImageDecking % totalImagesDecking) + 1;
+        updateImageDecking();
+    }
+
+    function prevImageDecking() {
+        currentImageDecking = (currentImageDecking - 1 <= 0) ? totalImagesDecking : currentImageDecking - 1;
+        updateImageDecking();
+    }
+
+    const totalImagesWalling = 7;
+    let currentImageWalling = 1;
+    const WallingElement = document.getElementById('WallingImage');
+
+    function updateImageWalling() {
+        WallingElement.classList.add('fade-out');
+setTimeout(() => {
+    WallingElement.src = `Images/Walling/${currentImageWalling}.jpg`;
+    WallingElement.alt = `Walling ${currentImageWalling}`;
+    WallingElement.onload = () => {
+        WallingElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageWalling() {
+        currentImageWalling = (currentImageWalling % totalImagesWalling) + 1;
+        updateImageWalling();
+    }
+
+    function prevImageWalling() {
+        currentImageWalling = (currentImageWalling - 1 <= 0) ? totalImagesWalling : currentImageWalling - 1;
+        updateImageWalling();
+    }
+
+    const totalImagesSleeperwork = 13;
+    let currentImageSleeperwork = 1;
+    const SleeperworkElement = document.getElementById('SleeperworkImage');
+
+    function updateImageSleeperwork() {
+        SleeperworkElement.classList.add('fade-out');
+setTimeout(() => {
+    SleeperworkElement.src = `Images/Sleeperwork/${currentImageSleeperwork}.jpg`;
+    SleeperworkElement.alt = `Sleeperwork ${currentImageSleeperwork}`;
+    SleeperworkElement.onload = () => {
+        SleeperworkElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageSleeperwork() {
+        currentImageSleeperwork = (currentImageSleeperwork % totalImagesSleeperwork) + 1;
+        updateImageSleeperwork();
+    }
+
+    function prevImageSleeperwork() {
+        currentImageSleeperwork = (currentImageSleeperwork - 1 <= 0) ? totalImagesSleeperwork : currentImageSleeperwork - 1;
+        updateImageSleeperwork();
+    }
+
+    const totalImagesLogCabins = 2;
+    let currentImageLogCabins = 1;
+    const LogCabinsElement = document.getElementById('LogCabinsImage');
+
+    function updateImageLogCabins() {
+        LogCabinsElement.classList.add('fade-out');
+setTimeout(() => {
+    LogCabinsElement.src = `Images/LogCabins/${currentImageLogCabins}.jpg`;
+    LogCabinsElement.alt = `LogCabins ${currentImageLogCabins}`;
+    LogCabinsElement.onload = () => {
+        LogCabinsElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageLogCabins() {
+        currentImageLogCabins = (currentImageLogCabins % totalImagesLogCabins) + 1;
+        updateImageLogCabins();
+    }
+
+    function prevImageLogCabins() {
+        currentImageLogCabins = (currentImageLogCabins - 1 <= 0) ? totalImagesLogCabins : currentImageLogCabins - 1;
+        updateImageLogCabins();
+    }
+
+    const totalImagesGazebos = 6;
+    let currentImageGazebos = 1;
+    const GazebosElement = document.getElementById('GazebosImage');
+
+    function updateImageGazebos() {
+        GazebosElement.classList.add('fade-out');
+setTimeout(() => {
+    GazebosElement.src = `Images/Gazebos/${currentImageGazebos}.jpg`;
+    GazebosElement.alt = `Gazebos ${currentImageGazebos}`;
+    GazebosElement.onload = () => {
+        GazebosElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageGazebos() {
+        currentImageGazebos = (currentImageGazebos % totalImagesGazebos) + 1;
+        updateImageGazebos();
+    }
+
+    function prevImageGazebos() {
+        currentImageGazebos = (currentImageGazebos - 1 <= 0) ? totalImagesGazebos : currentImageGazebos - 1;
+        updateImageGazebos();
+    }
+
+    const totalImagesOutdoorKitchens = 6;
+    let currentImageOutdoorKitchens = 1;
+    const OutdoorKitchensElement = document.getElementById('OutdoorKitchensImage');
+
+    function updateImageOutdoorKitchens() {
+        OutdoorKitchensElement.classList.add('fade-out');
+setTimeout(() => {
+    OutdoorKitchensElement.src = `Images/OutdoorKitchens/${currentImageOutdoorKitchens}.jpg`;
+    OutdoorKitchensElement.alt = `OutdoorKitchens ${currentImageOutdoorKitchens}`;
+    OutdoorKitchensElement.onload = () => {
+        OutdoorKitchensElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageOutdoorKitchens() {
+        currentImageOutdoorKitchens = (currentImageOutdoorKitchens % totalImagesOutdoorKitchens) + 1;
+        updateImageOutdoorKitchens();
+    }
+
+    function prevImageOutdoorKitchens() {
+        currentImageOutdoorKitchens = (currentImageOutdoorKitchens - 1 <= 0) ? totalImagesOutdoorKitchens : currentImageOutdoorKitchens - 1;
+        updateImageOutdoorKitchens();
+    }
+
+    const totalImagesFirepits = 1;
+    let currentImageFirepits = 1;
+    const FirepitsElement = document.getElementById('FirepitsImage');
+
+    function updateImageFirepits() {
+        FirepitsElement.classList.add('fade-out');
+setTimeout(() => {
+    FirepitsElement.src = `Images/Firepits/${currentImageFirepits}.jpg`;
+    FirepitsElement.alt = `Firepits ${currentImageFirepits}`;
+    FirepitsElement.onload = () => {
+        FirepitsElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageFirepits() {
+        currentImageFirepits = (currentImageFirepits % totalImagesFirepits) + 1;
+        updateImageFirepits();
+    }
+
+    function prevImageFirepits() {
+        currentImageFirepits = (currentImageFirepits - 1 <= 0) ? totalImagesFirepits : currentImageFirepits - 1;
+        updateImageFirepits();
+    }
+
+    const totalImagesMore = 6;
+    let currentImageMore = 1;
+    const MoreElement = document.getElementById('MoreImage');
+
+    function updateImageMore() {
+        MoreElement.classList.add('fade-out');
+setTimeout(() => {
+    MoreElement.src = `Images/More/${currentImageMore}.jpg`;
+    MoreElement.alt = `More ${currentImageMore}`;
+    MoreElement.onload = () => {
+        MoreElement.classList.remove('fade-out');
+    };
+}, 150);
+    }
+
+    function nextImageMore() {
+        currentImageMore = (currentImageMore % totalImagesMore) + 1;
+        updateImageMore();
+    }
+
+    function prevImageMore() {
+        currentImageMore = (currentImageMore - 1 <= 0) ? totalImagesMore : currentImageMore - 1;
+        updateImageMore();
+    }
 </script>
 
 </body>
