@@ -236,6 +236,12 @@
         border-radius: 8px;
         margin-bottom: 10px;
     }
+    .desktop-only {
+        display: inline;
+    }
+    .mobile-only {
+        display: none;
+    }
     @media (max-width: 768px) {
         .intro-text {
             font-size: 18px;
@@ -249,7 +255,12 @@
             height: 50px;
             background-size: contain;
         }
-
+        .desktop-only {
+            display: none;
+        }
+        .mobile-only {
+            display: inline;
+        }
         .logo {
             top: 10px;
             right: 10px;
@@ -307,14 +318,14 @@
         }
 
         .facebook-button {
-            top: 20px;
+            top: 60px;
             right: 20px;
             width: 40px;
             height: 40px;
         }
 
         .logo {
-            top: 20px;
+            top: 60px;
             right: 20px;
             width: 40px;
             height: 40px;
@@ -353,6 +364,46 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: 768px) {
+    section.sub-section .sub-section-content-centered {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    gap: 20px !important;
+    text-align: center !important;
+    }
+
+
+  section.sub-section .sub-section-content-centered .grid-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  section.sub-section .sub-section-content-centered .grid-item p {
+    font-size: 16px !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+
+  section.sub-section .sub-section-content-centered .gallery-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  section.sub-section .sub-section-content-centered .project-image {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+
 </style>
 
 </style>
@@ -369,11 +420,17 @@
 
 <main>
     <div class="intro-text" data-aos="fade-in">
-    Hi, I’m Nathan, I live in the heart of Worcestershire Worcester itself! I’ve been working in landscaping for many years,
-    <br>and I really enjoy helping people turn their outdoor spaces into something both beautiful and practical. 
-    <br>Whether it's a cosy back-garden or a full garden makeover, I love bringing ideas to life. From design to 
-    <br>execution, I offer a range of services to transform your garden into something special.
+    <span class="desktop-only">
+        Hi, I’m Nathan, I live in the heart of Worcestershire Worcester itself! I’ve been working in landscaping for many years,<br>
+        and I really enjoy helping people turn their outdoor spaces into something both beautiful and practical.<br>
+        Whether it's a cosy back-garden or a full garden makeover, I love bringing ideas to life. From design to<br>
+        execution, I offer a range of services to transform your garden into something special.
+    </span>
+    <span class="mobile-only">
+        Hi, I’m Nathan, I live in the heart of Worcestershire Worcester itself! I’ve been working in landscaping for many years, and I really enjoy helping people turn their outdoor spaces into something both beautiful and practical. Whether it's a cosy back-garden or a full garden makeover, I love bringing ideas to life. From design to execution, I offer a range of services to transform your garden into something special.
+    </span>
     </div>
+    
 
     <section class="past-projects">
         <h2 data-aos="fade-up">My Services</h2>
