@@ -45,11 +45,15 @@
         position: relative;
     }
     .logo {
+        background-image: url('Images/Icon.jpg');
+        background-size: cover;
+        background-position: center;
+
         position: absolute;
         top: 20px;
-        left: 50px;
+        left: 20px;
         width: 120px;
-        height: auto;
+        height: 120px;
         border-radius: 50%;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -70,7 +74,7 @@
         right: 50px;
         width: 120px;
         height: 120px;
-        background-image: url('Images/FB.png');
+        background-image: url('Images/Facebook.png');
         background-size: cover;
         background-position: center;
         border-radius: 50%;
@@ -237,7 +241,24 @@
             font-size: 18px;
             padding: 0 15px;
             line-height: 1.6;
+
+        .facebook-button {
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
         }
+
+        .logo {
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+        }
+
+}
 
         .services,
         .past-projects,
@@ -293,8 +314,10 @@
         }
 
         .logo {
-            width: 100px;
-            top: 10px;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
         }
     }
 
@@ -322,13 +345,21 @@
 .gallery-buttons button:hover {
     background-color: #3a6540;
 }
+
+@media (max-width: 768px) {
+  .gallery-container {
+    width: 95% !important;
+    max-width: 95% !important;
+    margin: 0 auto;
+  }
+}
 </style>
 
 </style>
 </head>
 <body>
 <header>
-    <img src="Images/Icon.jpg" class="logo" alt="Nathan's Landscaping Logo">
+    <div class="logo" role="img" aria-label="Nathan's Landscaping Logo"></div>
     <div class="header-text">
     <h1>Nathan's Landscaping</h1>
     <p>Quality Gardens, Professional Services</p>
