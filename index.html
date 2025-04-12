@@ -214,7 +214,13 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    .grid-item {
+    .full-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-item {
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
@@ -227,7 +233,8 @@
         border-radius: 8px;
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.158);
         text-align: center;
-        margin-bottom: -20px;
+        margin-bottom: 0px;
+        margin-top: 10px;
     }
 
     .grid-item img {
@@ -291,7 +298,13 @@
             grid-template-columns: 1fr;
         }
 
-        .grid-item {
+        .full-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-item {
             padding: 15px;
         }
 
@@ -377,7 +390,13 @@
     }
 
 
-  section.sub-section .sub-section-content-centered .grid-item {
+  section.sub-section .sub-section-content-centered .full-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-item {
     width: 100% !important;
     max-width: 100% !important;
     padding: 0 15px !important;
@@ -467,45 +486,32 @@
         <h2 data-aos="fade-up">Past Projects</h2>
     </section>
 
-    <section class="past-projects">
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Patios</h2>
-                    </div>
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Block Paving</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="past-projects">
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
+    
+<section class="past-projects">
+    <div class="sub-section" data-aos="fade-up">
+        <div class="sub-section-content">
+            <div class="grid">
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Patios</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="patioImage" src="Images/Patios/1.jpg" alt="Patio 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImagePatio()">Previous</button>
-                                    <button onclick="nextImagePatio()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="patioImage" src="Images/Patios/1.jpg" alt="Patio 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImagePatio()">Previous</button>
+                                <button onclick="nextImagePatio()">Next</button>
                             </div>
                         </div>
                         <p>Patios are a perfect way to extend your living space outdoors — whether you're after a sleek, modern look or a more traditional finish, we tailor each patio to suit your garden and lifestyle. Built to last and designed with care, our patios provide the ideal spot for relaxing, entertaining, or simply enjoying your outdoor space year-round.</p>
                     </div>
+                </div>
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Block Paving</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="BlockpavingImage" src="Images/BlockPaving/1.jpg" alt="BlockPaving 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageBlockpaving()">Previous</button>
-                                    <button onclick="nextImageBlockpaving()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="BlockpavingImage" src="Images/BlockPaving/1.jpg" alt="BlockPaving 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageBlockpaving()">Previous</button>
+                                <button onclick="nextImageBlockpaving()">Next</button>
                             </div>
                         </div>
                         <p>Block paving is a durable and stylish option for driveways, pathways, and patios — offering both practicality and curb appeal. With a range of patterns, colours, and finishes available, we can create a custom look that complements your home perfectly. Each installation is built with precision to ensure long-lasting quality and a flawless finish.</p>
@@ -513,47 +519,34 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="past-projects">
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Fencing</h2>
-                    </div>
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Decking</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
+<section class="past-projects">
+    <div class="sub-section" data-aos="fade-up">
+        <div class="sub-section-content">
+            <div class="grid">
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Fencing</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="FencingImage" src="Images/Fencing/1.jpg" alt="Fencing 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageFencing()">Previous</button>
-                                    <button onclick="nextImageFencing()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="FencingImage" src="Images/Fencing/1.jpg" alt="Fencing 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageFencing()">Previous</button>
+                                <button onclick="nextImageFencing()">Next</button>
                             </div>
                         </div>
                         <p>Fencing adds both privacy and structure to your garden, while also enhancing its overall look. Whether you need a full boundary replacement or just a tidy repair, we offer high-quality, long-lasting fence solutions tailored to your space and needs.</p>
                     </div>
+                </div>
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Decking</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="DeckingImage" src="Images/Decking/1.jpg" alt="Decking 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageDecking()">Previous</button>
-                                    <button onclick="nextImageDecking()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="DeckingImage" src="Images/Decking/1.jpg" alt="Decking 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageDecking()">Previous</button>
+                                <button onclick="nextImageDecking()">Next</button>
                             </div>
                         </div>
                         <p>Decking is a great way to create a level, usable area in your garden — perfect for seating, socialising, or simply enjoying the outdoors. We design and install custom decks that blend beautifully with your garden and stand the test of time.</p>
@@ -561,47 +554,34 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="past-projects">
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Walling</h2>
-                    </div>
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Sleeperwork</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
+<section class="past-projects">
+    <div class="sub-section" data-aos="fade-up">
+        <div class="sub-section-content">
+            <div class="grid">
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Walling</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="WallingImage" src="Images/Walling/1.jpg" alt="Walling 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageWalling()">Previous</button>
-                                    <button onclick="nextImageWalling()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="WallingImage" src="Images/Walling/1.jpg" alt="Walling 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageWalling()">Previous</button>
+                                <button onclick="nextImageWalling()">Next</button>
                             </div>
                         </div>
                         <p>Garden walls add strength, structure, and style to any outdoor space. From decorative features to retaining walls, we build with both function and finish in mind, using quality materials to ensure a clean, lasting result.</p>
                     </div>
+                </div>
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Sleeperwork</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="SleeperworkImage" src="Images/Sleeperwork/1.jpg" alt="Sleeperwork 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageSleeperwork()">Previous</button>
-                                    <button onclick="nextImageSleeperwork()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="SleeperworkImage" src="Images/Sleeperwork/1.jpg" alt="Sleeperwork 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageSleeperwork()">Previous</button>
+                                <button onclick="nextImageSleeperwork()">Next</button>
                             </div>
                         </div>
                         <p>Sleepers are a versatile and eye-catching addition to any garden. Whether used for raised beds, borders, steps, or retaining walls, sleeperwork offers a natural, rustic charm while staying strong and practical.</p>
@@ -609,47 +589,34 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="past-projects">
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Log Cabins</h2>
-                    </div>
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Gazebos</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
+<section class="past-projects">
+    <div class="sub-section" data-aos="fade-up">
+        <div class="sub-section-content">
+            <div class="grid">
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Log Cabins</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="LogCabinsImage" src="Images/LogCabins/1.jpg" alt="LogCabins 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageLogCabins()">Previous</button>
-                                    <button onclick="nextImageLogCabins()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="LogCabinsImage" src="Images/LogCabins/1.jpg" alt="LogCabins 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageLogCabins()">Previous</button>
+                                <button onclick="nextImageLogCabins()">Next</button>
                             </div>
                         </div>
                         <p>Log cabins make a unique and functional feature in any garden — ideal for offices, studios, or relaxing spaces. We handle the full build with care and craftsmanship to ensure a sturdy, stylish finish that suits your space.</p>
                     </div>
+                </div>
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Gazebos</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="GazebosImage" src="Images/Gazebos/1.jpg" alt="Gazebos 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageGazebos()">Previous</button>
-                                    <button onclick="nextImageGazebos()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="GazebosImage" src="Images/Gazebos/1.jpg" alt="Gazebos 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageGazebos()">Previous</button>
+                                <button onclick="nextImageGazebos()">Next</button>
                             </div>
                         </div>
                         <p>A gazebo adds instant character and shelter to your garden, creating the perfect spot for shade, relaxation, or outdoor dining. Built with precision and style, our gazebos are tailored to enhance your outdoor living.</p>
@@ -657,47 +624,34 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="past-projects">
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Outdoor kitchens</h2>
-                    </div>
-                    <div class="grid-title">
-                        <h2 data-aos="fade-up">Firepits</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="sub-section" data-aos="fade-up">
-            <div class="sub-section-content">
-                <div class="grid">
+<section class="past-projects">
+    <div class="sub-section" data-aos="fade-up">
+        <div class="sub-section-content">
+            <div class="grid">
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Outdoor kitchens</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="OutdoorKitchensImage" src="Images/OutdoorKitchens/1.jpg" alt="OutdoorKitchens 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageOutdoorKitchens()">Previous</button>
-                                    <button onclick="nextImageOutdoorKitchens()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="OutdoorKitchensImage" src="Images/OutdoorKitchens/1.jpg" alt="OutdoorKitchens 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageOutdoorKitchens()">Previous</button>
+                                <button onclick="nextImageOutdoorKitchens()">Next</button>
                             </div>
                         </div>
                         <p>Take your garden gatherings to the next level with a custom outdoor kitchen. From worktops to built-in BBQs, we design functional, weather-resistant setups that make entertaining effortless and enjoyable.</p>
                     </div>
+                </div>
+                <div class="grid-item full-section">
+                    <div class="grid-title"><h2 data-aos="fade-up">Firepits</h2></div>
                     <div class="grid-item">
-                        <div class="grid-item">
-                            <div class="gallery-container">
-                                <img id="FirepitsImage" src="Images/Firepits/1.jpg" alt="Firepits 1" class="project-image">
-                                <div class="gallery-buttons">
-                                    <button onclick="prevImageFirepits()">Previous</button>
-                                    <button onclick="nextImageFirepits()">Next</button>
-                                </div>
+                        <div class="gallery-container">
+                            <img id="FirepitsImage" src="Images/Firepits/1.jpg" alt="Firepits 1" class="project-image">
+                            <div class="gallery-buttons">
+                                <button onclick="prevImageFirepits()">Previous</button>
+                                <button onclick="nextImageFirepits()">Next</button>
                             </div>
                         </div>
                         <p>A firepit brings warmth, ambiance, and a focal point to your garden. Whether it’s for cosy nights or summer socials, we can install a safe, stylish fire feature that transforms how you use your outdoor space.</p>
@@ -705,7 +659,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="past-projects">
         <h2 data-aos="fade-up">And even more</h2>
